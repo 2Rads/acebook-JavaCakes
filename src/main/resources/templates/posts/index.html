@@ -62,7 +62,7 @@
           style="background:#337ab7;color:white; border-radius: 14px; padding:10px; width: 30%" /> <input type="reset"
           value="Reset" style="background:#337ab7;color:white; border-radius: 14px; padding:10px; width: 30%" /></p>
     </form>
-    <div class="grid-container" th:each="post: ${posts}">
+    <div class="grid-container bubble bubble-corner" th:each="post: ${posts}">
       <!-- <table> -->
       <!-- <tr> -->
 
@@ -81,7 +81,7 @@
         <!-- </td> -->
       </div>
       <!-- <td> -->
-      <div class="grid-item bubble bubble-corner">
+      <div class="grid-item">
 
         <div th:text="${post.content}"></div><br>
         <div>Posted: <span th:text="${post.timeFormat()}"></span></div>
@@ -92,7 +92,10 @@
         <div th:if="${post.contentimage != null && post.contentimage.length != 0} ">
           <img class="contentImage" th:src="'data:image/jpeg;base64,' + ${imgUtil.getImgData(post.contentimage)}"
             alt="" />
-        </div>
+        </div><br><br>
+        <div> <button><span th:text="${post.getLikesCount()}"></span> likes </button><span> </span><button><span
+              th:text="${post.getCommentsCount()}"></span>
+            comments</button></div>
       </div>
 
       <div class="grid-item right">
@@ -108,29 +111,31 @@
           <!-- </div> -->
         </span>
         <br><br>
-        <div> <span th:text="${post.getLikesCount()}"></span> likes</div>
-        <div><span th:text="${post.getCommentsCount()}"></span> comments</div>
 
         <!-- form to delete posts-->
         <div th:if="${thisUser.username == post.user.username}">
           <form th:action="@{'/deletePost/{id}'(id=${post.id})}" th:object="${post}" method="post">
-            <input type="hidden" th:id="${post.id}">Delete post</input>
+            <button class="some-button" type="submit" id="delete"
+              onClick="return confirm('Are you sure you want to delete this post?')">Delete post</button>
+            <!-- <input type="hidden" th:id="${post.id}">Delete post</input>
             <input type="hidden" name="from" value="/posts">
             <button type="submit" id="delete"
               onClick="return confirm('Are you sure you want to delete this post?')"></button>
-          </form>
+          </form> -->
         </div>
 
         <!-- editing posts -->
         <form th:action="@{'/edit/{id}'(id=${post.id})}" th:object="${post}" method="get">
-          <input type="hidden" th:id="${post.id}">Edit</input>
-          <button type="submit" id="edit"></button>
+          <button class="some-button" th:id="${post.id}" type="submit" id="edit">Edit post</button>
+          <!-- <input type="hidden" >Edit</input>
+          <button type="submit" id="edit"></button> -->
         </form>
 
         <!-- see comments -->
         <form th:action="@{'/post/{id}'(id=${post.id})}" th:object="${post}" method="get">
-          <input type="hidden" th:id="${post.id}">See Comments</input>
-          <button type="submit" id="comment"></button>
+          <button class="some-button" th:id="${post.id}" type="submit" id="comment">See comments</button>
+          <!-- <input type="hidden" th:id="${post.id}">See Comments</input>
+          <button type="submit" id="comment"></button> -->
         </form>
       </div>
     </div>

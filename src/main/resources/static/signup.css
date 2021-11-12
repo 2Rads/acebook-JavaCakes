@@ -246,7 +246,7 @@ input[type="submit"]:hover {
 input[type="reset"] {
   font-size: .9em;
   color: #fff;
-  background: #337ab7;
+  background: #2e6da4;
   outline: none;
   border: 1px solid #337ab7;
   cursor: pointer;
@@ -824,8 +824,8 @@ input.checkbox:checked:after {
   background-color: #afc5ee8f;
   padding: 10px;
   margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin-right: 100px;
+  margin-bottom: 40px;
   border-radius: 3%;
 }
 
@@ -929,4 +929,23 @@ input.checkbox:checked:after {
 
 .edit-content {
   width: 90%;
+}
+
+.some-button {
+  font-size: .7em;
+  color: #fff;
+  background: #2e6da4;
+  outline: none;
+  border: 1px solid #337ab7;
+  cursor: pointer;
+  padding: 0.4em;
+  -webkit-appearance: none;
+  width: 40%;
+  margin: 2em 0;
+  border-radius: 6px; 
+}
+
+.logo {
+  width: 30%;
+  height: 40%;
 }

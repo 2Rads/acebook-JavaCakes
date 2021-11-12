@@ -22,17 +22,17 @@
 <body>
     <div class="container">
         <div class="wrapper">
-            <h1>Please sign up</h1>
+            <h1>Sign up to JavaCakes</h1>
             <div class="main-agileinfo">
                 <div class="agileits-top">
                     <form action="#" th:action="@{/users}" th:object="${user}" method="post"
                         enctype="multipart/form-data">
-                        <p>Username: <input class="text" type="text" th:field="*{username}" placeholder="Username"
-                                required /></p>
-                        <p>Password: <input class="text" type="password" th:field="*{password}" placeholder="Password"
-                                required /></p>
-                        <p>Photos: <input id="file" type="file" accept="image/png, image/jpeg" name="file" /> </p>
-                        <p><input type="submit" value="Submit" id="submit" /> <input type="reset" value="Reset" /></p>
+                        <p><input class="text" type="text" th:field="*{username}" placeholder="Username" required /></p>
+                        <p><input class="text" type="password" th:field="*{password}" placeholder="Password" required />
+                        </p>
+                        <p style="text-align: left;">Photos: <input id="file" type="file" accept="image/png, image/jpeg"
+                                name="file" /> </p>
+                        <input type="submit" value="Submit" id="submit" /> <input type="reset" value="Reset" />
                     </form>
                     <div class="wthree-text">
                         <label class="anim">
