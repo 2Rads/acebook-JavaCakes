@@ -2,6 +2,15 @@
 
 Link to Application : https://acebook-javacakes.herokuapp.com/login
 
+Team Acebook-Java-Tigers-Two:
+- Delia Bute
+- Ewa Jablonska
+- Ranjot Dhoofer
+- Leo Brown
+- Anamaria Mocanu
+
+
+
 The application uses:
   - `maven` to build the project
   - `thymeleaf` for templating
