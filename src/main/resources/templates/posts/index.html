@@ -128,11 +128,13 @@
         </div>
         <div>
           <!-- editing posts -->
+          <div th:if="${thisUser.username == post.user.username}">
           <form th:action="@{'/edit/{id}'(id=${post.id})}" th:object="${post}" method="get">
             <button class="some-button" th:id="${post.id}" type="submit" id="edit">Edit post</button>
             <!-- <input type="hidden" >Edit</input>
           <button type="submit" id="edit"></button> -->
           </form>
+          </div>
         </div>
         <!-- see comments -->
         <form th:action="@{'/post/{id}'(id=${post.id})}" th:object="${post}" method="get">
