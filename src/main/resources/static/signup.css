@@ -246,7 +246,7 @@ input[type="submit"]:hover {
 input[type="reset"] {
   font-size: .9em;
   color: #fff;
-  background: #337ab7;
+  background: #2e6da4;
   outline: none;
   border: 1px solid #337ab7;
   cursor: pointer;
@@ -824,8 +824,8 @@ input.checkbox:checked:after {
   background-color: #afc5ee8f;
   padding: 10px;
   margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin-right: 100px;
+  margin-bottom: 40px;
   border-radius: 3%;
 }
 
@@ -843,6 +843,19 @@ input.checkbox:checked:after {
   display: grid;
 
   grid-gap: 50px;
+  grid-template-columns: 30% 70%;
+  background-color: #afc5ee8f;
+  padding: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 3%;
+}
+
+.grid-container3 {
+  display: grid;
+
+  grid-gap: 20px;
   grid-template-columns: 30% 70%;
   background-color: #afc5ee8f;
   padding: 40px;
@@ -898,7 +911,7 @@ input.checkbox:checked:after {
   display: grid;
 
   grid-gap: 20px;
-  grid-template-columns: 30% 50% 20%;
+  grid-template-columns: 30% 70%;
   background-color: #afc5ee8f;
   padding: 20px;
   margin-left: 20px;
@@ -927,6 +940,41 @@ input.checkbox:checked:after {
   justify-content: center;
 }
 
+.grid-item5 {
+  padding: 20px;
+  font-size: 15px;
+  color: black;
+  text-align: center;
+  width: 90%;
+  height: 100%;
+  justify-content: center;
+  align-content: center;
+}
+
 .edit-content {
   width: 90%;
+}
+
+.some-button {
+  font-size: .7em;
+  color: #fff;
+  background: #2e6da4;
+  outline: none;
+  border: 1px solid #337ab7;
+  cursor: pointer;
+  padding: 0.2em;
+  -webkit-appearance: none;
+  width: 40%;
+  margin: 1em 0;
+  border-radius: 6px; 
+}
+
+.like-button {
+  width: 20%;
+}
+
+.logo {
+  float:center;
+  text-align: center;
+  padding-top: 50px; 
 }
