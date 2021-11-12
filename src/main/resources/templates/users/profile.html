@@ -78,11 +78,14 @@
         </div><br><br>
         <div>Posted: <span th:text="${post.timeFormat()}"></span></div>
         <div>Created on: <span th:text="${#dates.format(post.time, 'dd-MMM-yyyy')}"></span></div><br>
+        <div> <button><span th:text="${post.getLikesCount()}"></span> likes </button><span> </span><button><span
+          th:text="${post.getCommentsCount()}"></span>
+        comments</button></div>
       </div>
       <div class="grid-item right">
         <!-- Likes and Comment Counters-->
-        <div> <span th:text="${post.getLikesCount()}"></span> likes</div>
-        <div><span th:text="${post.getCommentsCount()}"></span> comments</div>
+        <!-- <div> <span th:text="${post.getLikesCount()}"></span> likes</div>
+        <div><span th:text="${post.getCommentsCount()}"></span> comments</div> -->
         <!-- IF -->
 
         <div th:if="${thisUser.username == post.user.username}">
