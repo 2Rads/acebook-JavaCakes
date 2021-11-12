@@ -45,7 +45,7 @@
 
   <br>
 
-  <div class="grid-container2">
+  <div class="grid-container2 bubble bubble-corner">
 
     <div class="grid-item2">
       <!-- IF -->
@@ -59,7 +59,7 @@
       </div><br>
       <div id="username" th:text="${post.user.username}" style="font-weight: bold;"></div>
     </div>
-    <div class="grid-item2 bubble bubble-corner">
+    <div class="grid-item2">
 
       <div th:text="${post.content}"></div><br>
       <div>Created on: <span th:text="${#dates.format(post.time, 'dd-MMM-yyyy')}"></span></div>
